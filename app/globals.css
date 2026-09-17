@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  /* A system font stack: each OS's native UI font, in preference order. Zero network
+     requests, zero layout shift, and it already matches every visitor's platform look —
+     strictly faster than even a self-hosted web font for this kind of utility-first site. */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+}
+
+/* Deliberately no `prefers-color-scheme: dark` override here — the spec calls for a
+   consistent light theme (§14), and every component in this project uses hardcoded light
+   Tailwind classes (bg-white, text-gray-900, etc.) rather than the CSS variables above, so a
+   dark override on just the <body> would produce a broken half-dark page rather than a real
+   dark mode. A real dark mode would need every component themed, not just this file. */
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Accessibility safety net: guarantee a visible keyboard focus indicator everywhere, even on
+   elements styled with focus:outline-none (which many inputs in this project pair with a
+   border-color change alone — not always sufficient contrast for keyboard users). This only
+   fires for keyboard/programmatic focus, not mouse clicks, so it doesn't add visual noise for
+   mouse users. */
+:focus-visible {
+  outline: 2px solid #2563eb !important;
+  outline-offset: 2px !important;
+}

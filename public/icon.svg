@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" width="100%" height="100%">
+  <defs>
+    <linearGradient id="th-bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="50%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#4F46E5" />
+    </linearGradient>
+    <linearGradient id="th-accent-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#818CF8" />
+    </linearGradient>
+    <linearGradient id="th-spark-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+    <filter id="th-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1E40AF" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Base Squircle with Shadow -->
+  <rect x="3" y="3" width="42" height="42" rx="12" fill="url(#th-bg-grad)" filter="url(#th-glow)" />
+
+  <!-- Subtle Inner Border Highlight -->
+  <rect x="4" y="4" width="40" height="40" rx="11" fill="none" stroke="rgba(255, 255, 255, 0.25)" stroke-width="1.5" />
+
+  <!-- Modern Dynamic Hub & Tools Motif -->
+  <!-- Central Interconnected Hub Ring -->
+  <circle cx="24" cy="24" r="5" fill="none" stroke="#FFFFFF" stroke-width="2.5" />
+  
+  <!-- Left Tool Wing (Wrench / Tech prong) -->
+  <path d="M12 21C12 17 15 14 19 14L22 17L18 21L14 21C12.8954 21 12 21 12 21Z" fill="#FFFFFF" fill-opacity="0.95" />
+  <path d="M13 24H19" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M12 27C12 31 15 34 19 34L22 31L18 27L14 27C12.8954 27 12 27 12 27Z" fill="#FFFFFF" fill-opacity="0.95" />
+
+  <!-- Right Dynamic Spark / Lightning Arrow (Power & Speed) -->
+  <path d="M26 13L35 22H29L32 35L23 26H29L26 13Z" fill="url(#th-spark-grad)" stroke="#FFFFFF" stroke-width="1.2" stroke-linejoin="round" />
+
+  <!-- Corner Hub Connectors -->
+  <circle cx="15" cy="15" r="1.5" fill="#93C5FD" />
+  <circle cx="33" cy="33" r="1.5" fill="#FDE68A" />
+</svg>
