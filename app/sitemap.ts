@@ -4,7 +4,13 @@ import { categories } from "@/data/categories";
 import { guides } from "@/data/guides";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+  const base =
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : process.env.NODE_ENV === "production"
+        ? "https://toolhub-ecru.vercel.app"
+        : "http://localhost:3000");
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: base, changeFrequency: "weekly", priority: 1 },
