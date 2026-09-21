@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   },
   description:
     "Free online tools, calculators, converters, and student utilities. Fast, simple, and useful — no signup required.",
+  verification: {
+    google: "IsR2K4NMe0JYk4BQ4Hiv2aIDVKUGDR_6HPniQAOqY30",
+  },
   icons: {
     icon: [
       { url: "/icon.svg", type: "image/svg+xml" },
