@@ -832,6 +832,445 @@ export const tools: ToolRecord[] = [
     component: "ImageFormatConverter",
   },
   {
+    slug: "png-to-jpg",
+    category: "image",
+    toolName: "PNG to JPG Converter",
+    primaryKeyword: "png to jpg",
+    secondaryKeywords: ["convert png to jpg", "png to jpg converter", "change png to jpg", "turn png into jpg"],
+    metaTitle: "PNG to JPG Converter - Convert PNG to JPG Online Free",
+    metaDescription:
+      "Free online PNG to JPG converter. Convert transparent PNG images to high quality JPG format with custom background color and adjustable compression.",
+    h1: "PNG to JPG Converter",
+    intro:
+      "Convert PNG images to JPG format instantly in your browser. PNG files often carry heavy file sizes and transparency that certain portals and websites do not accept. This tool allows you to convert single or multiple PNG images to optimized JPG files with customizable compression quality and background fill color.",
+    howToUse: [
+      "Drag and drop or select one or more PNG images.",
+      "Adjust the JPG compression quality and choose a background fill color for transparent areas.",
+      "Download your converted JPG image or download all files at once.",
+    ],
+    features: [
+      "Client-side conversion with zero file size restrictions",
+      "Adjustable JPG compression quality slider",
+      "Custom background color replacement for transparent backgrounds",
+      "Batch conversion and copy to clipboard support",
+    ],
+    useCases: [
+      "Compressing graphics and photos for websites and blogs",
+      "Converting transparent logos for platforms requiring JPG format",
+      "Optimizing product pictures for email newsletters",
+    ],
+    faq: [
+      {
+        question: "What happens to the transparent background in PNG when converting to JPG?",
+        answer:
+          "JPG does not support transparency. Our converter fills transparent pixels with your chosen background color (default is pure white, or pick black or a custom color).",
+      },
+      {
+        question: "Will converting PNG to JPG reduce file size?",
+        answer:
+          "Yes, JPG compression is lossy and typically reduces file size by 50% to 80% compared to uncompressed PNG images.",
+      },
+      {
+        question: "Are my photos uploaded to a server?",
+        answer:
+          "No. All conversions happen entirely in your browser using HTML5 Canvas. Your files never leave your computer or phone.",
+      },
+    ],
+    relatedTools: ["png-to-jpeg", "png-to-webp", "jpg-to-png", "image-compressor"],
+    indexable: true,
+    lastUpdated: "2026-10-08",
+    author: "ToolArena Editorial",
+    reviewer: "ToolArena Editorial",
+    component: "PngToJpg",
+  },
+  {
+    slug: "png-to-jpeg",
+    category: "image",
+    toolName: "PNG to JPEG Converter",
+    primaryKeyword: "png to jpeg",
+    secondaryKeywords: ["convert png to jpeg", "png to jpeg converter", "online png to jpeg", "save png as jpeg"],
+    metaTitle: "PNG to JPEG Converter - Free Online Tool",
+    metaDescription:
+      "Fast, free PNG to JPEG converter. Transform PNG images into JPEG format directly in your browser with zero data uploads.",
+    h1: "PNG to JPEG Converter",
+    intro:
+      "Convert PNG graphics, illustrations, and photos into JPEG files. JPEG is the universal standard for digital images, supported by every operating system, device, and web browser. Convert PNG images to JPEG format with full control over image quality and background coloring.",
+    howToUse: [
+      "Upload your PNG file or drag it into the drop zone.",
+      "Select your preferred compression quality.",
+      "Download your converted JPEG file instantly.",
+    ],
+    features: [
+      "100% private in-browser conversion",
+      "Side-by-side file size savings comparison",
+      "Batch processing support",
+      "Customizable transparency background fill",
+    ],
+    useCases: [
+      "Standardizing photo formats across digital publishing pipelines",
+      "Preparing graphics for social media uploads",
+      "Saving storage space on mobile devices and servers",
+    ],
+    faq: [
+      {
+        question: "Is there any difference between JPG and JPEG?",
+        answer:
+          "No, JPG and JPEG are identical image formats. The extension JPG exists because older Windows file systems required three-letter file extensions (.jpg vs .jpeg).",
+      },
+      {
+        question: "Can I convert multiple PNG files to JPEG at once?",
+        answer:
+          "Yes, you can drop multiple PNG files simultaneously and convert them all in a single click.",
+      },
+    ],
+    relatedTools: ["png-to-jpg", "png-to-webp", "jpeg-to-png", "image-format-converter"],
+    indexable: true,
+    lastUpdated: "2026-10-08",
+    author: "ToolArena Editorial",
+    reviewer: "ToolArena Editorial",
+    component: "PngToJpeg",
+  },
+  {
+    slug: "png-to-webp",
+    category: "image",
+    toolName: "PNG to WebP Converter",
+    primaryKeyword: "png to webp",
+    secondaryKeywords: ["convert png to webp", "png to webp converter", "compress png to webp", "png webp online"],
+    metaTitle: "PNG to WebP Converter - Compress PNG to Next-Gen WebP",
+    metaDescription:
+      "Convert PNG to WebP online for free. Drastically reduce image file sizes by up to 80% while preserving crisp transparency and visual quality.",
+    h1: "PNG to WebP Converter",
+    intro:
+      "Convert PNG images to Google's next-generation WebP format. WebP offers substantially better lossless and lossy compression than PNG, cutting file sizes by 30% to 80% without visible loss in quality. Best of all, WebP maintains alpha transparency, making it the ideal modern replacement for web graphics.",
+    howToUse: [
+      "Upload your PNG images into the converter.",
+      "Adjust the WebP quality level using the slider.",
+      "Click Download to save your ultra-fast WebP images.",
+    ],
+    features: [
+      "Retains alpha channel transparency",
+      "Significant file size savings up to 80%",
+      "Batch conversion support",
+      "Zero server upload for absolute privacy",
+    ],
+    useCases: [
+      "Optimizing web page load speeds and Google Core Web Vitals",
+      "Reducing CDN bandwidth and storage costs",
+      "Publishing modern responsive web assets",
+    ],
+    faq: [
+      {
+        question: "Does WebP support transparency like PNG?",
+        answer:
+          "Yes! Unlike JPG, WebP fully supports 8-bit alpha transparency while compressing the image far more efficiently than PNG.",
+      },
+      {
+        question: "Do all browsers support WebP?",
+        answer:
+          "Yes, over 97% of all web browsers globally (including Chrome, Safari, Firefox, Edge, and iOS Safari) fully support WebP.",
+      },
+    ],
+    relatedTools: ["webp-to-png", "png-to-jpg", "jpg-to-webp", "image-compressor"],
+    indexable: true,
+    lastUpdated: "2026-10-08",
+    author: "ToolArena Editorial",
+    reviewer: "ToolArena Editorial",
+    component: "PngToWebp",
+  },
+  {
+    slug: "jpg-to-png",
+    category: "image",
+    toolName: "JPG to PNG Converter",
+    primaryKeyword: "jpg to png",
+    secondaryKeywords: ["convert jpg to png", "jpg to png converter", "turn jpg into png", "jpeg to png"],
+    metaTitle: "JPG to PNG Converter - Convert JPG to Lossless PNG Online",
+    metaDescription:
+      "Free online JPG to PNG converter. Convert JPEG/JPG photos and graphics to lossless PNG format in your browser.",
+    h1: "JPG to PNG Converter",
+    intro:
+      "Convert JPG and JPEG images to PNG format. PNG provides lossless compression, meaning no further image degradation occurs upon repeated saving or editing. Ideal when preparing assets for graphic design, print layout, or editing in software like Figma and Photoshop.",
+    howToUse: [
+      "Choose or drag your JPG image into the upload area.",
+      "The tool instantly converts the image to uncompressed PNG.",
+      "Download the resulting PNG file.",
+    ],
+    features: [
+      "Lossless conversion preserves every pixel",
+      "Copy to clipboard feature",
+      "Batch conversion for multiple JPGs",
+      "Completely private and client-side",
+    ],
+    useCases: [
+      "Exporting photos to graphic editing tools without re-compression artifacts",
+      "Meeting image format upload requirements on specific web services",
+      "Converting graphics for software development and UI design",
+    ],
+    faq: [
+      {
+        question: "Does converting JPG to PNG make the image transparent?",
+        answer:
+          "No, converting JPG to PNG changes the file container to PNG, but existing pixels remain opaque because JPG files do not contain transparency data.",
+      },
+      {
+        question: "Why is the PNG file larger than the original JPG?",
+        answer:
+          "PNG uses lossless compression to preserve full pixel data, whereas JPG uses lossy compression that throws away details. As a result, PNG files are typically larger.",
+      },
+    ],
+    relatedTools: ["jpeg-to-png", "png-to-jpg", "jpg-to-webp", "image-resizer"],
+    indexable: true,
+    lastUpdated: "2026-10-08",
+    author: "ToolArena Editorial",
+    reviewer: "ToolArena Editorial",
+    component: "JpgToPng",
+  },
+  {
+    slug: "jpeg-to-png",
+    category: "image",
+    toolName: "JPEG to PNG Converter",
+    primaryKeyword: "jpeg to png",
+    secondaryKeywords: ["convert jpeg to png", "jpeg to png converter", "online jpeg to png"],
+    metaTitle: "JPEG to PNG Converter - Free Online Image Converter",
+    metaDescription:
+      "Convert JPEG to PNG online for free. Transform compressed JPEG files into clean, lossless PNG format in seconds.",
+    h1: "JPEG to PNG Converter",
+    intro:
+      "Transform your JPEG images into PNG format directly inside your browser. Unlike JPEG, which uses lossy compression, PNG uses lossless compression that avoids compression artifacts and supports transparency in downstream editors.",
+    howToUse: [
+      "Select or drop your JPEG images.",
+      "Wait for automatic conversion to PNG.",
+      "Download your PNG file.",
+    ],
+    features: [
+      "Fast browser-based processing",
+      "No file size restrictions",
+      "Batch export",
+      "High quality output",
+    ],
+    useCases: [
+      "Preventing generation loss when repeatedly editing digital photos",
+      "Submitting artwork to printing platforms requiring PNG format",
+    ],
+    faq: [
+      {
+        question: "Can I convert photos taken from my camera or phone?",
+        answer:
+          "Yes, smartphone photos in JPEG format can be converted into PNG format instantly on desktop and mobile browsers.",
+      },
+    ],
+    relatedTools: ["jpg-to-png", "png-to-jpeg", "webp-to-png", "image-format-converter"],
+    indexable: true,
+    lastUpdated: "2026-10-08",
+    author: "ToolArena Editorial",
+    reviewer: "ToolArena Editorial",
+    component: "JpegToPng",
+  },
+  {
+    slug: "jpg-to-webp",
+    category: "image",
+    toolName: "JPG to WebP Converter",
+    primaryKeyword: "jpg to webp",
+    secondaryKeywords: ["convert jpg to webp", "jpg to webp converter", "jpeg to webp", "compress jpg to webp"],
+    metaTitle: "JPG to WebP Converter - Reduce JPG Size with WebP",
+    metaDescription:
+      "Convert JPG to WebP online for free. Cut file size by 30-50% compared to JPG while retaining sharp, vibrant image quality.",
+    h1: "JPG to WebP Converter",
+    intro:
+      "Convert standard JPG photographs to WebP format to speed up your website. WebP produces 25% to 35% smaller file sizes than comparable JPG files at identical visual quality, boosting your page performance and search engine ranking.",
+    howToUse: [
+      "Upload your JPG images.",
+      "Fine-tune the output quality slider.",
+      "Download your optimized WebP images.",
+    ],
+    features: [
+      "Dramatically reduces page weight",
+      "Side-by-side byte size reduction metrics",
+      "Adjustable quality control",
+      "Works offline and in-browser",
+    ],
+    useCases: [
+      "Boosting Google PageSpeed Insights and Lighthouse performance scores",
+      "Saving bandwidth on high-traffic websites and e-commerce stores",
+    ],
+    faq: [
+      {
+        question: "How much file size will I save by converting JPG to WebP?",
+        answer:
+          "Typically, WebP images are 25% to 35% smaller than JPG files at equivalent visual quality.",
+      },
+    ],
+    relatedTools: ["webp-to-jpg", "png-to-webp", "jpg-to-png", "image-compressor"],
+    indexable: true,
+    lastUpdated: "2026-10-08",
+    author: "ToolArena Editorial",
+    reviewer: "ToolArena Editorial",
+    component: "JpgToWebp",
+  },
+  {
+    slug: "webp-to-png",
+    category: "image",
+    toolName: "WebP to PNG Converter",
+    primaryKeyword: "webp to png",
+    secondaryKeywords: ["convert webp to png", "webp to png converter", "turn webp into png", "webp to png free"],
+    metaTitle: "WebP to PNG Converter - Convert WebP to PNG Online Free",
+    metaDescription:
+      "Free online WebP to PNG converter. Convert modern WebP images to universal transparent PNG format in seconds.",
+    h1: "WebP to PNG Converter",
+    intro:
+      "Convert WebP images downloaded from the web into standard PNG format. Many older graphics editors, desktop apps, and printing services do not support WebP. This tool converts WebP files into universally compatible PNGs while keeping transparent backgrounds intact.",
+    howToUse: [
+      "Drop your WebP file into the upload box.",
+      "Preview the converted PNG image.",
+      "Download the PNG file or copy to clipboard.",
+    ],
+    features: [
+      "Maintains transparent backgrounds",
+      "Full compatibility across all design tools",
+      "Instant conversion without uploading files",
+      "Batch WebP conversion",
+    ],
+    useCases: [
+      "Opening web-downloaded images in legacy photo editing software",
+      "Preparing assets for Word, PowerPoint, or legacy publishing tools",
+    ],
+    faq: [
+      {
+        question: "Will converting WebP to PNG preserve my transparent background?",
+        answer:
+          "Yes! Both WebP and PNG support alpha channel transparency, so transparent areas remain fully intact.",
+      },
+    ],
+    relatedTools: ["png-to-webp", "webp-to-jpg", "jpg-to-png", "image-format-converter"],
+    indexable: true,
+    lastUpdated: "2026-10-08",
+    author: "ToolArena Editorial",
+    reviewer: "ToolArena Editorial",
+    component: "WebpToPng",
+  },
+  {
+    slug: "webp-to-jpg",
+    category: "image",
+    toolName: "WebP to JPG Converter",
+    primaryKeyword: "webp to jpg",
+    secondaryKeywords: ["convert webp to jpg", "webp to jpg converter", "turn webp to jpg", "webp to jpeg"],
+    metaTitle: "WebP to JPG Converter - Convert WebP to JPG Online",
+    metaDescription:
+      "Convert WebP images to JPG online for free. Transform downloaded WebP files into standard JPG format with adjustable quality.",
+    h1: "WebP to JPG Converter",
+    intro:
+      "Convert WebP files into standard JPG format with ease. If you saved a picture from Google or a modern website in .webp format and cannot view or open it in your photo viewer, word processor, or social media platform, convert it here into standard JPG in seconds.",
+    howToUse: [
+      "Select your WebP files.",
+      "Choose quality level and background color.",
+      "Click Download to save your JPG.",
+    ],
+    features: [
+      "Universal format compatibility",
+      "Adjustable compression slider",
+      "White background auto-fill for transparent graphics",
+      "Fast client-side processing",
+    ],
+    useCases: [
+      "Opening downloaded web pictures in software that cannot read .webp files",
+      "Uploading pictures to portals and government forms that mandate JPG",
+    ],
+    faq: [
+      {
+        question: "Why do some programs fail to open WebP files?",
+        answer:
+          "WebP is a modern format developed by Google. While modern browsers support it, many desktop image viewers and document editors only support traditional formats like JPG and PNG.",
+      },
+    ],
+    relatedTools: ["jpg-to-webp", "webp-to-png", "png-to-jpg", "image-format-converter"],
+    indexable: true,
+    lastUpdated: "2026-10-08",
+    author: "ToolArena Editorial",
+    reviewer: "ToolArena Editorial",
+    component: "WebpToJpg",
+  },
+  {
+    slug: "svg-to-png",
+    category: "image",
+    toolName: "SVG to PNG Converter",
+    primaryKeyword: "svg to png",
+    secondaryKeywords: ["convert svg to png", "svg to png converter", "rasterize svg", "svg to high res png"],
+    metaTitle: "SVG to PNG Converter - Convert Vector SVG to High-Res PNG",
+    metaDescription:
+      "Free online SVG to PNG converter. Rasterize vector SVG files into transparent high-resolution PNG images with 1x, 2x, 3x, and 4x scale options.",
+    h1: "SVG to PNG Converter",
+    intro:
+      "Convert scalable vector SVG graphics into crisp raster PNG images. Vector graphics are ideal for icons and logos, but many applications and social networks only accept raster PNG files. Choose your resolution multiplier (up to 4x) to export ultra-sharp, high-DPI PNGs.",
+    howToUse: [
+      "Upload your .svg vector file.",
+      "Select the resolution scale factor (1x, 2x, 3x, or 4x).",
+      "Download your transparent high-resolution PNG.",
+    ],
+    features: [
+      "Customizable resolution scaling (1x, 2x, 3x, 4x)",
+      "Full alpha channel transparency preserved",
+      "Instant local rasterization in browser",
+      "Batch SVG export",
+    ],
+    useCases: [
+      "Exporting vector logos for presentation decks, word processors, and social media",
+      "Generating high-res favicons, avatars, and app graphics from SVG assets",
+    ],
+    faq: [
+      {
+        question: "Can I generate high-resolution 4K or retina PNGs from SVG?",
+        answer:
+          "Yes! Select the 2x, 3x, or 4x resolution multiplier to render crystal-clear high-density PNG graphics from your vector SVG.",
+      },
+    ],
+    relatedTools: ["png-to-webp", "favicon-generator", "image-resizer", "image-format-converter"],
+    indexable: true,
+    lastUpdated: "2026-10-08",
+    author: "ToolArena Editorial",
+    reviewer: "ToolArena Editorial",
+    component: "SvgToPng",
+  },
+  {
+    slug: "bmp-to-jpg",
+    category: "image",
+    toolName: "BMP to JPG Converter",
+    primaryKeyword: "bmp to jpg",
+    secondaryKeywords: ["convert bmp to jpg", "bmp to jpg converter", "bitmap to jpg", "bmp to jpeg"],
+    metaTitle: "BMP to JPG Converter - Convert Bitmap to JPG Online",
+    metaDescription:
+      "Free online BMP to JPG converter. Compress heavy bitmap images into lightweight JPG files directly in your browser.",
+    h1: "BMP to JPG Converter",
+    intro:
+      "Convert uncompressed BMP (Bitmap) files into compact JPG images. BMP files contain raw pixel data and are often tens of megabytes in size. Converting them to JPG typically shrinks file size by over 90% without noticeable quality difference.",
+    howToUse: [
+      "Select your BMP bitmap file.",
+      "Set your target JPG compression quality.",
+      "Download the lightweight JPG file.",
+    ],
+    features: [
+      "Up to 95% file size reduction",
+      "Adjustable JPG quality control",
+      "Instant in-browser decoding",
+      "Safe and private",
+    ],
+    useCases: [
+      "Compressing scanned documents and legacy medical or CAD bitmaps",
+      "Sharing heavy bitmap screenshots via email or chat",
+    ],
+    faq: [
+      {
+        question: "Why are BMP files so large compared to JPG?",
+        answer:
+          "BMP files store uncompressed raw pixel data byte-by-byte. JPG uses sophisticated discrete cosine transform compression that reduces file size dramatically.",
+      },
+    ],
+    relatedTools: ["png-to-jpg", "jpg-to-webp", "image-compressor", "image-format-converter"],
+    indexable: true,
+    lastUpdated: "2026-10-08",
+    author: "ToolArena Editorial",
+    reviewer: "ToolArena Editorial",
+    component: "BmpToJpg",
+  },
+  {
     slug: "favicon-generator",
     category: "image",
     toolName: "Favicon Generator",

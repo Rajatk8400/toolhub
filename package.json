@@ -9,7 +9,7 @@
     "lint": "eslint",
     "test": "vitest run",
     "test:watch": "vitest",
-    "sitemap": "tsx scripts/generate-sitemap.ts"
+    "sitemap": "npx tsx scripts/generate-sitemap.ts"
   },
   "dependencies": {
     "bcryptjs": "^3.0.3",

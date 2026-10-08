@@ -3,13 +3,11 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Logo from "@/components/Logo";
-import SearchBox from "@/components/SearchBox";
 import { getFavorites, FAVORITES_EVENT } from "@/lib/storage/favorites";
 import { categories } from "@/data/categories";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
   const [favoriteCount, setFavoriteCount] = useState(0);
 
   useEffect(() => {
@@ -28,7 +26,6 @@ export default function Header() {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setMobileMenuOpen(false);
-        setSearchOpen(false);
       }
     };
     window.addEventListener("keydown", handleKeyDown);
@@ -42,11 +39,6 @@ export default function Header() {
           {/* Brand Logo */}
           <div className="flex items-center gap-6">
             <Logo size="md" />
-          </div>
-
-          {/* Desktop Search Trigger / Input */}
-          <div className="hidden lg:block w-72">
-            <SearchBox placeholder="Search tools..." />
           </div>
 
           {/* Primary Desktop Navigation */}
@@ -92,17 +84,6 @@ export default function Header() {
 
           {/* Right Mobile / Tablet Actions */}
           <div className="flex items-center gap-2 md:hidden">
-            <button
-              type="button"
-              onClick={() => setSearchOpen(!searchOpen)}
-              aria-label="Open search"
-              className="rounded-lg p-2 text-gray-600 hover:bg-gray-100 hover:text-gray-900 transition"
-            >
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </button>
-
             <Link
               href="/favorites"
               aria-label="Favorites"
@@ -135,17 +116,6 @@ export default function Header() {
             </button>
           </div>
         </div>
-
-        {/* Mobile Search Dropdown Bar */}
-        {searchOpen && (
-          <div className="border-t border-gray-100 bg-gray-50/90 p-3 lg:hidden">
-            <SearchBox
-              placeholder="Search all online tools..."
-              autoFocus
-              onSelect={() => setSearchOpen(false)}
-            />
-          </div>
-        )}
       </header>
 
       {/* Mobile Drawer Navigation */}
@@ -172,13 +142,6 @@ export default function Header() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
-              </div>
-
-              <div className="mt-4">
-                <SearchBox
-                  placeholder="Search tools..."
-                  onSelect={() => setMobileMenuOpen(false)}
-                />
               </div>
 
               <nav className="mt-6 flex flex-col space-y-3 text-base font-medium text-gray-700">
