@@ -5,6 +5,8 @@ import { componentRegistry } from "@/components/tools/registry";
 import ToolUsedTracker from "@/components/analytics/ToolUsedTracker";
 import AdSlot from "@/components/ads/AdSlot";
 
+import FavoriteButton from "@/components/FavoriteButton";
+
 export default function ToolPageTemplate({ tool }: { tool: ToolRecord }) {
   const ToolComponent = componentRegistry[tool.component];
   const related = getRelatedTools(tool);
@@ -31,7 +33,12 @@ export default function ToolPageTemplate({ tool }: { tool: ToolRecord }) {
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-8">
-      <ToolUsedTracker slug={tool.slug} />
+      <ToolUsedTracker
+        slug={tool.slug}
+        toolName={tool.toolName}
+        category={tool.category}
+        metaDescription={tool.metaDescription}
+      />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
@@ -41,7 +48,18 @@ export default function ToolPageTemplate({ tool }: { tool: ToolRecord }) {
         <span className="text-gray-700">{tool.toolName}</span>
       </nav>
 
-      <h1 className="text-3xl font-bold text-gray-900">{tool.h1}</h1>
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <h1 className="text-3xl font-bold text-gray-900">{tool.h1}</h1>
+        <FavoriteButton
+          slug={tool.slug}
+          toolName={tool.toolName}
+          category={tool.category}
+          metaDescription={tool.metaDescription}
+          size="md"
+          showLabel
+          className="rounded-lg border border-gray-200 bg-white px-3 py-1.5 shadow-2xs hover:border-amber-300"
+        />
+      </div>
 
       <div className="mt-4 whitespace-pre-line text-gray-700">{tool.intro}</div>
 

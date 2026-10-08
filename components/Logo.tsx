@@ -16,7 +16,6 @@ export default function Logo({
   href = "/",
   className = "",
 }: LogoProps) {
-  // Dimension mappings
   const dimensions = {
     sm: { icon: "h-7 w-7", text: "text-lg", tag: "text-[10px]", dot: "h-1.5 w-1.5" },
     md: { icon: "h-9 w-9", text: "text-xl", tag: "text-xs", dot: "h-2 w-2" },
@@ -26,55 +25,48 @@ export default function Logo({
 
   const content = (
     <div className={`group inline-flex items-center gap-2.5 ${className}`}>
-      {/* Dynamic Animated Icon Mark */}
+      {/* ToolArena Unique Geometric Arena Nexus Icon */}
       <div
-        className={`relative flex ${dimensions.icon} shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-700 p-1.5 shadow-md shadow-blue-500/20 ring-1 ring-white/25 transition-all duration-300 ease-out group-hover:scale-105 group-hover:-rotate-2 group-hover:shadow-lg group-hover:shadow-blue-500/35`}
+        className={`relative flex ${dimensions.icon} shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-600 via-indigo-600 to-cyan-500 p-1.5 shadow-md shadow-blue-500/20 ring-1 ring-white/30 transition-all duration-300 ease-out group-hover:scale-105 group-hover:-rotate-1 group-hover:shadow-lg group-hover:shadow-blue-500/35`}
       >
         {/* Ambient Glow */}
-        <div className="absolute inset-0 -z-10 rounded-xl bg-gradient-to-tr from-cyan-400/40 to-indigo-500/40 blur-sm opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+        <div className="absolute inset-0 -z-10 rounded-xl bg-gradient-to-tr from-cyan-400/40 via-blue-500/30 to-indigo-600/40 blur-sm opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
         <svg
           viewBox="0 0 32 32"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="h-full w-full drop-shadow-sm transition-transform duration-300 group-hover:scale-110"
+          className="h-full w-full drop-shadow-xs transition-transform duration-300 group-hover:scale-105"
         >
-          {/* Central Nexus Ring */}
-          <circle cx="16" cy="16" r="3.5" stroke="#FFFFFF" strokeWidth="2" fill="none" opacity="0.9" />
-
-          {/* Left Multi-Tool Prongs */}
+          {/* Hexagonal Arena Container Outline */}
           <path
-            d="M7 13.5C7 10.5 9.5 8.5 12.5 8.5L14.5 10.5L11.5 13.5L8.5 13.5C7.8 13.5 7 13.5 7 13.5Z"
-            fill="#FFFFFF"
-            fillOpacity="0.95"
-          />
-          <path d="M8 16H12.5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
-          <path
-            d="M7 18.5C7 21.5 9.5 23.5 12.5 23.5L14.5 21.5L11.5 18.5L8.5 18.5C7.8 18.5 7 18.5 7 18.5Z"
-            fill="#FFFFFF"
-            fillOpacity="0.95"
-          />
-
-          {/* Right Dynamic Spark / Lightning Arrow */}
-          <path
-            d="M17.5 8L24.5 15H20L22.5 24L15.5 17.5H19.5L17.5 8Z"
-            fill="url(#logo-spark-accent)"
+            d="M16 2.8L28.2 9.8V22.2L16 29.2L3.8 22.2V9.8L16 2.8Z"
             stroke="#FFFFFF"
-            strokeWidth="0.9"
+            strokeWidth="1.6"
             strokeLinejoin="round"
+            strokeOpacity="0.85"
           />
 
-          {/* Spark Gradient Definition */}
-          <defs>
-            <linearGradient id="logo-spark-accent" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#FDE047" />
-              <stop offset="100%" stopColor="#F59E0B" />
-            </linearGradient>
-          </defs>
+          {/* Central Nexus Core */}
+          <circle cx="16" cy="16" r="3" fill="#FFFFFF" />
+
+          {/* Interconnected Modular Rays linking arena walls to core */}
+          <path d="M16 4.5V13" stroke="#FFFFFF" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M16 19V27.5" stroke="#FFFFFF" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M6 10.5L13.5 14.5" stroke="#FFFFFF" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M18.5 17.5L26 21.5" stroke="#FFFFFF" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M6 21.5L13.5 17.5" stroke="#FFFFFF" strokeWidth="1.8" strokeLinecap="round" />
+          <path d="M18.5 14.5L26 10.5" stroke="#FFFFFF" strokeWidth="1.8" strokeLinecap="round" />
+
+          {/* Precision Utility Nodes */}
+          <circle cx="9.5" cy="12.5" r="1.3" fill="#38BDF8" />
+          <circle cx="22.5" cy="19.5" r="1.3" fill="#38BDF8" />
+          <circle cx="9.5" cy="19.5" r="1.3" fill="#FDE047" />
+          <circle cx="22.5" cy="12.5" r="1.3" fill="#FDE047" />
         </svg>
       </div>
 
-      {/* Typography & Brand Mark */}
+      {/* Brand Typography */}
       {!iconOnly && (
         <div className="flex flex-col">
           <div className="flex items-center">
@@ -86,16 +78,16 @@ export default function Logo({
             <span
               className={`font-black tracking-tight bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent transition-all duration-300 ${dimensions.text}`}
             >
-              Hub
+              Arena
             </span>
-            {/* Dynamic Accent Spark Dot */}
+            {/* Arena Active Pulse Dot */}
             <span
-              className={`ml-0.5 rounded-full bg-cyan-500 shadow-sm shadow-cyan-500/50 transition-all duration-300 group-hover:scale-125 group-hover:bg-cyan-400 ${dimensions.dot}`}
+              className={`ml-1 rounded-full bg-cyan-500 shadow-xs shadow-cyan-500/60 transition-all duration-300 group-hover:scale-125 group-hover:bg-cyan-400 ${dimensions.dot}`}
             />
           </div>
           {showTagline && (
             <span className={`-mt-0.5 font-medium text-slate-500 tracking-wide ${dimensions.tag}`}>
-              Smart Web Utilities & Calculators
+              Free Online Tools &amp; Utilities
             </span>
           )}
         </div>
@@ -105,7 +97,11 @@ export default function Logo({
 
   if (href) {
     return (
-      <Link href={href} aria-label="ToolHub - Free Online Tools & Calculators" className="inline-block outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded-xl">
+      <Link
+        href={href}
+        aria-label="ToolArena - Free Online Tools, Calculators & Utilities"
+        className="inline-block outline-none focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:ring-offset-2 rounded-xl"
+      >
         {content}
       </Link>
     );

@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
     (process.env.VERCEL_PROJECT_PRODUCTION_URL
       ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
       : process.env.NODE_ENV === "production"
-        ? "https://toolhub-ecru.vercel.app"
+        ? "https://toolarena.vercel.app"
         : "http://localhost:3000");
   return {
     rules: [

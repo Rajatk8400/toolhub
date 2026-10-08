@@ -4,12 +4,13 @@ import { fileURLToPath } from "node:url";
 import { tools } from "../data/tools";
 import { categories } from "../data/categories";
 import { guides } from "../data/guides";
+import { toolCollections } from "../data/collections";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, "..");
 
-const base = process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || "https://toolhub-ecru.vercel.app";
+const base = process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || "https://toolarena.vercel.app";
 
 interface SitemapEntry {
   url: string;
@@ -20,6 +21,8 @@ interface SitemapEntry {
 
 const staticPages: SitemapEntry[] = [
   { url: base, changeFrequency: "weekly", priority: 1.0 },
+  { url: `${base}/tools`, changeFrequency: "weekly", priority: 0.9 },
+  { url: `${base}/collections`, changeFrequency: "weekly", priority: 0.85 },
   { url: `${base}/guides`, changeFrequency: "weekly", priority: 0.7 },
   { url: `${base}/about`, changeFrequency: "monthly", priority: 0.5 },
   { url: `${base}/contact`, changeFrequency: "monthly", priority: 0.4 },
@@ -27,11 +30,19 @@ const staticPages: SitemapEntry[] = [
   { url: `${base}/sitemap`, changeFrequency: "monthly", priority: 0.3 },
 ];
 
-const categoryPages: SitemapEntry[] = categories.map((c) => ({
-  url: `${base}/${c.slug}`,
+const collectionPages: SitemapEntry[] = toolCollections.map((col) => ({
+  url: `${base}/collections/${col.slug}`,
   changeFrequency: "weekly",
   priority: 0.8,
 }));
+
+const categoryPages: SitemapEntry[] = categories
+  .filter((c) => c.slug !== "tools")
+  .map((c) => ({
+    url: `${base}/${c.slug}`,
+    changeFrequency: "weekly",
+    priority: 0.8,
+  }));
 
 const toolPages: SitemapEntry[] = tools
   .filter((t) => t.indexable)
@@ -53,6 +64,7 @@ const guidePages: SitemapEntry[] = guides
 
 const allEntries: SitemapEntry[] = [
   ...staticPages,
+  ...collectionPages,
   ...categoryPages,
   ...toolPages,
   ...guidePages,

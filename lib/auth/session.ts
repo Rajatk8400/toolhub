@@ -1,6 +1,6 @@
 import { SignJWT, jwtVerify } from "jose";
 
-export const SESSION_COOKIE = "toolhub_session";
+export const SESSION_COOKIE = "toolarena_session";
 
 function getSecret() {
   const secret = process.env.NEXTAUTH_SECRET;

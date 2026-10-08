@@ -1,4 +1,4 @@
-# ToolHub — Phase 1 scaffold
+# ToolArena — Phase 1 scaffold
 
 This is a **starter foundation**, not the full 100+ tool platform — see "Scope & what's next"
 below for why, and how to keep building it out.
@@ -145,7 +145,7 @@ below for why, and how to keep building it out.
   `/terms`, `/disclaimer`, `/cookie-policy` as genuine, complete template content — each
   flagged with an honest "have a lawyer review this" notice rather than presented as
   ready-to-ship legal copy. The Cookie Policy specifically documents the cookies this codebase
-  actually sets (`toolhub_session`, `toolhub_oauth_state`, conditional GA/AdSense), not generic
+  actually sets (`toolarena_session`, `toolarena_oauth_state`, conditional GA/AdSense), not generic
   boilerplate. The four legal template pages are marked `noindex` (unmodified legal templates
   are boilerplate/duplicate-content-prone) and correctly excluded from the sitemap per the
   spec's own "no noindex URLs in the sitemap" rule; About/Contact/FAQ are indexable and

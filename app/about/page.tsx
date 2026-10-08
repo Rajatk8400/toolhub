@@ -2,49 +2,60 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About ToolHub",
-  description: "Who builds ToolHub, what it's for, and how we approach accuracy and editorial standards.",
+  title: "About ToolArena",
+  description:
+    "ToolArena is an all-in-one online tools platform designed to make everyday digital tasks easier, faster and more accessible.",
   alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
   return (
-    <main className="mx-auto max-w-3xl px-4 py-10">
-      <h1 className="text-3xl font-bold text-gray-900">About ToolHub</h1>
+    <main className="mx-auto max-w-3xl px-4 py-12">
+      <nav className="mb-4 text-sm text-gray-500">
+        <Link href="/" className="hover:text-blue-600">Home</Link> {" / "}
+        <span className="text-gray-700">About</span>
+      </nav>
 
-      <div className="mt-6 space-y-6 text-gray-700">
-        <p>
-          ToolHub is a free collection of online calculators, converters, and utilities for students,
-          developers, and everyday tasks. Every tool is built to run entirely in your browser wherever
-          possible — no signup, and for most tools, nothing you enter ever leaves your device.
+      <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">About ToolArena</h1>
+
+      <div className="mt-6 space-y-6 text-gray-700 leading-relaxed">
+        <p className="text-lg text-gray-800">
+          ToolArena is an all-in-one online tools platform designed to make everyday digital tasks easier, faster and more accessible.
         </p>
 
-        <section>
-          <h2 className="text-xl font-semibold text-gray-900">What we build</h2>
-          <p className="mt-2">
-            Each tool is written and maintained with a working interface and genuine explanatory content —
-            not a keyword-stuffed page wrapped around a broken widget. We'd rather ship fewer tools that
-            actually work than a long list of placeholders.
+        <p>
+          We bring together useful calculators, converters, SEO tools, developer utilities, PDF editors, image processors, text formatters, and everyday online utilities into one cohesive, fast, and easy-to-use digital ecosystem.
+        </p>
+
+        <section className="rounded-2xl border border-gray-200/80 bg-white p-6 shadow-2xs">
+          <h2 className="text-xl font-bold text-gray-900">What we build</h2>
+          <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+            Every tool in our library is engineered with an active, functional interface and genuine explanatory documentation — not a keyword-stuffed shell around broken widgets. We believe in providing robust tools that execute with speed and precision.
           </p>
         </section>
 
-        <section>
-          <h2 className="text-xl font-semibold text-gray-900">Editorial standards</h2>
-          <p className="mt-2">
-            Content is written by the ToolHub editorial team and reviewed before publishing. For
-            time-sensitive information — exam dates, scholarship deadlines, admission cycles — we require a
-            verifiable official source and a recorded "last verified" date before anything is published; see
-            our <Link href="/students/hub/exam" className="text-blue-700 hover:underline">student information hub</Link> for
-            an example of how that's presented.
+        <section className="rounded-2xl border border-gray-200/80 bg-white p-6 shadow-2xs">
+          <h2 className="text-xl font-bold text-gray-900">Privacy &amp; Client-Side Speed</h2>
+          <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+            Whenever technically possible, ToolArena utilities process your inputs directly within your web browser using modern WebAssembly and native JavaScript APIs. That means your calculations, JSON payloads, images, and documents never need to travel to third-party servers.
           </p>
         </section>
 
-        <section>
-          <h2 className="text-xl font-semibold text-gray-900">Corrections</h2>
-          <p className="mt-2">
-            If you spot an error — a wrong formula, outdated information, or a broken tool — please{" "}
-            <Link href="/contact" className="text-blue-700 hover:underline">let us know</Link>. We'd rather fix it
-            than leave it.
+        <section className="rounded-2xl border border-gray-200/80 bg-white p-6 shadow-2xs">
+          <h2 className="text-xl font-bold text-gray-900">Editorial standards &amp; Verification</h2>
+          <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+            All educational explanations, math formulas, and informational guides are created and reviewed by the ToolArena editorial team. For time-sensitive information — such as exam schedules, scholarship criteria, and government admissions — we reference verifiable official sources and include a recorded &quot;last verified&quot; timestamp.
+          </p>
+        </section>
+
+        <section className="rounded-2xl border border-gray-200/80 bg-white p-6 shadow-2xs">
+          <h2 className="text-xl font-bold text-gray-900">Feedback &amp; Corrections</h2>
+          <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+            If you notice an inaccuracy in a formula, an unexpected calculation output, or would like to request a new tool, please{" "}
+            <Link href="/contact" className="text-blue-600 font-semibold hover:underline">
+              reach out through our contact page
+            </Link>
+            . We actively maintain and refine our toolset.
           </p>
         </section>
       </div>

@@ -1,88 +1,72 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions - ToolHub",
-  description: "The terms governing use of ToolHub's free online tools and content.",
+  title: "Terms & Conditions - ToolArena",
+  description: "The terms governing use of ToolArena's free online tools and content.",
   alternates: { canonical: "/terms" },
   robots: "noindex, follow",
 };
 
 export default function TermsPage() {
   return (
-    <main className="mx-auto max-w-3xl px-4 py-10">
-      <h1 className="text-3xl font-bold text-gray-900">Terms & Conditions</h1>
-      <p className="mt-2 text-sm text-gray-500">Last updated: [DATE]</p>
+    <main className="mx-auto max-w-3xl px-4 py-12">
+      <nav className="mb-4 text-sm text-gray-500">
+        <Link href="/" className="hover:text-blue-600">Home</Link> {" / "}
+        <span className="text-gray-700">Terms &amp; Conditions</span>
+      </nav>
 
-      <div className="mt-4 rounded-lg bg-amber-50 px-4 py-3 text-sm text-amber-800">
-        This is a starting template, not finished legal copy. Have a lawyer review it — including
-        jurisdiction, liability limits, and any regulatory requirements that apply to your users — before
-        publishing it as your real terms.
-      </div>
+      <h1 className="text-3xl font-extrabold text-gray-900">Terms &amp; Conditions</h1>
+      <p className="mt-2 text-sm text-gray-500">Last updated: October 2026</p>
 
-      <div className="mt-6 space-y-6 text-gray-700">
-        <section>
-          <h2 className="text-xl font-semibold text-gray-900">Acceptance of terms</h2>
-          <p className="mt-2">
-            By using this site, you agree to these terms. If you don't agree, please don't use the site.
+      <div className="mt-6 space-y-6 text-gray-700 leading-relaxed">
+        <section className="rounded-2xl border border-gray-200/80 bg-white p-6 shadow-2xs">
+          <h2 className="text-xl font-bold text-gray-900">Acceptance of terms</h2>
+          <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+            By visiting or utilizing ToolArena, you agree to these terms and conditions. If you do not accept these terms, you should discontinue using the platform.
           </p>
         </section>
 
-        <section>
-          <h2 className="text-xl font-semibold text-gray-900">Use of the tools</h2>
-          <p className="mt-2">
-            Tools on this site are provided free of charge for personal and professional use. You agree not
-            to use automated systems to scrape, overload, or abuse the site's infrastructure beyond normal
-            browsing and tool use.
+        <section className="rounded-2xl border border-gray-200/80 bg-white p-6 shadow-2xs">
+          <h2 className="text-xl font-bold text-gray-900">Use of ToolArena utilities</h2>
+          <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+            All online calculators, converters, and developer tools are offered free of charge for personal, academic, and business purposes. You agree not to abuse or overwhelm the platform via malicious automated requests or denial-of-service attempts.
           </p>
         </section>
 
-        <section>
-          <h2 className="text-xl font-semibold text-gray-900">No warranty on results</h2>
-          <p className="mt-2">
-            Calculators, converters, and other tools are provided "as is." While we aim for accuracy, we
-            don't guarantee that any result is error-free or fit for a particular purpose — see our{" "}
-            <a href="/disclaimer" className="text-blue-700 hover:underline">Disclaimer</a> for specifics, especially
-            around financial, health, and legal calculations.
+        <section className="rounded-2xl border border-gray-200/80 bg-white p-6 shadow-2xs">
+          <h2 className="text-xl font-bold text-gray-900">No warranty on calculation results</h2>
+          <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+            ToolArena provides tools and informational data on an &quot;as is&quot; basis. While calculations follow recognized industry algorithms, ToolArena provides no guarantee that outputs are error-free. Please see our{" "}
+            <Link href="/disclaimer" className="text-blue-600 font-semibold hover:underline">
+              Disclaimer
+            </Link>{" "}
+            for details regarding financial, medical, and legal limitations.
           </p>
         </section>
 
-        <section>
-          <h2 className="text-xl font-semibold text-gray-900">Intellectual property</h2>
-          <p className="mt-2">
-            The site's design, original written content, and code are owned by ToolHub or its licensors.
-            You may use the tools themselves freely, but may not copy or republish the site's content or
-            code without permission.
+        <section className="rounded-2xl border border-gray-200/80 bg-white p-6 shadow-2xs">
+          <h2 className="text-xl font-bold text-gray-900">Intellectual property</h2>
+          <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+            The ToolArena brand, original visual designs, logos, software algorithms, and editorial guides are the property of ToolArena. You may utilize the tools freely for your own tasks, but may not duplicate or scrape the platform for unauthorized republishing.
           </p>
         </section>
 
-        <section>
-          <h2 className="text-xl font-semibold text-gray-900">Accounts</h2>
-          <p className="mt-2">
-            If you're granted an admin or editor account, you're responsible for keeping your credentials
-            confidential and for activity under your account.
+        <section className="rounded-2xl border border-gray-200/80 bg-white p-6 shadow-2xs">
+          <h2 className="text-xl font-bold text-gray-900">Limitation of liability</h2>
+          <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+            To the maximum extent permitted by applicable law, ToolArena shall not be held liable for any damages or losses arising from reliance on calculations or information on this site.
           </p>
         </section>
 
-        <section>
-          <h2 className="text-xl font-semibold text-gray-900">Limitation of liability</h2>
-          <p className="mt-2">
-            To the fullest extent permitted by law, ToolHub isn't liable for any damages arising from your
-            use of, or inability to use, this site or its tools.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-semibold text-gray-900">Changes to these terms</h2>
-          <p className="mt-2">
-            We may update these terms from time to time. Continued use of the site after changes means you
-            accept the updated terms.
-          </p>
-        </section>
-
-        <section>
-          <h2 className="text-xl font-semibold text-gray-900">Contact</h2>
-          <p className="mt-2">
-            Questions about these terms? Reach out via our <a href="/contact" className="text-blue-700 hover:underline">contact page</a>.
+        <section className="rounded-2xl border border-gray-200/80 bg-white p-6 shadow-2xs">
+          <h2 className="text-xl font-bold text-gray-900">Contact</h2>
+          <p className="mt-2 text-sm text-gray-600 leading-relaxed">
+            Questions regarding our terms? Feel free to contact us via our{" "}
+            <Link href="/contact" className="text-blue-600 font-semibold hover:underline">
+              contact page
+            </Link>
+            .
           </p>
         </section>
       </div>

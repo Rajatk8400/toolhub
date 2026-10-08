@@ -1,35 +1,36 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions - ToolHub",
-  description: "Common questions about using ToolHub's free online tools, calculators, and student utilities.",
+  title: "Frequently Asked Questions - ToolArena",
+  description: "Common questions about using ToolArena's free online tools, calculators, and student utilities.",
   alternates: { canonical: "/faq" },
 };
 
 const faqs = [
   {
-    question: "Is ToolHub really free to use?",
-    answer: "Yes. Every tool on this site is free, with no signup required for basic use.",
+    question: "Is ToolArena really free to use?",
+    answer: "Yes. Every tool across our platform is completely free with no usage limits or hidden subscription tiers.",
   },
   {
     question: "Do I need to create an account?",
-    answer: "No — accounts are only used for the admin panel, which manages site content. Using any of the public tools doesn't require signing in.",
+    answer: "No. All public utilities, calculators, and converters run with zero signup. Accounts are strictly reserved for administrative content updates.",
   },
   {
     question: "Is my data uploaded when I use a tool?",
-    answer: "Most tools — calculators, converters, formatters, PDF and image tools — run entirely in your browser, and your input never leaves your device. A tool's own page notes if it works differently.",
+    answer: "The vast majority of ToolArena tools — including calculators, converters, JSON formatters, PDF and image processors — run entirely in your web browser. Your inputs, documents, and figures never leave your device.",
   },
   {
     question: "How accurate are the calculators?",
-    answer: "Each calculator uses the standard formula described on its page. That said, financial, health, and tax-related results are estimates — see our Disclaimer for details on where to seek professional advice instead.",
+    answer: "Each calculator implements the standard, verified industry formula clearly explained on its page. Financial, tax, and health calculations serve as screening estimates — consult licensed professionals for binding decisions.",
   },
   {
     question: "How do I report a bug or incorrect result?",
-    answer: "Use the Contact page to send us details, including which tool and what inputs produced the issue — that's the fastest way for us to reproduce and fix it.",
+    answer: "Use our Contact page to send details, including the tool name and inputs that produced the issue. Our developers test and address reported bugs promptly.",
   },
   {
-    question: "Can I suggest a new tool?",
-    answer: "Yes, the Contact page works for that too. We prioritize tools that are genuinely useful and can be built as real, working features rather than placeholders.",
+    question: "Can I suggest a new tool for ToolArena?",
+    answer: "Absolutely! We actively welcome suggestions from students, developers, webmasters, and professionals for useful tools we can build next.",
   },
 ];
 
@@ -45,14 +46,26 @@ export default function FaqPage() {
   };
 
   return (
-    <main className="mx-auto max-w-3xl px-4 py-10">
+    <main className="mx-auto max-w-3xl px-4 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-      <h1 className="text-3xl font-bold text-gray-900">Frequently Asked Questions</h1>
-      <div className="mt-6 divide-y divide-gray-200">
+
+      <nav className="mb-4 text-sm text-gray-500">
+        <Link href="/" className="hover:text-blue-600">Home</Link> {" / "}
+        <span className="text-gray-700">FAQ</span>
+      </nav>
+
+      <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+        Frequently Asked Questions
+      </h1>
+      <p className="mt-3 text-sm text-gray-600">
+        Got questions about ToolArena? Find answers below or reach out to our team directly.
+      </p>
+
+      <div className="mt-8 divide-y divide-gray-200/80 rounded-2xl border border-gray-200/80 bg-white p-6 shadow-2xs">
         {faqs.map((f, i) => (
-          <div key={i} className="py-4">
-            <h2 className="font-semibold text-gray-900">{f.question}</h2>
-            <p className="mt-1 text-gray-700">{f.answer}</p>
+          <div key={i} className="py-5 first:pt-0 last:pb-0">
+            <h2 className="font-bold text-gray-900 text-base">{f.question}</h2>
+            <p className="mt-2 text-sm text-gray-600 leading-relaxed">{f.answer}</p>
           </div>
         ))}
       </div>

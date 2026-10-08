@@ -17,7 +17,7 @@ export async function GET(req: NextRequest) {
   }
 
   const res = NextResponse.redirect(authUrl);
-  res.cookies.set("toolhub_oauth_state", state, {
+  res.cookies.set("toolarena_oauth_state", state, {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     sameSite: "lax",

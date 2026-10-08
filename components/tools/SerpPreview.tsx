@@ -4,7 +4,7 @@ import { useState } from "react";
 import { analytics } from "@/lib/analytics/track";
 
 export default function SerpPreview() {
-  const [title, setTitle] = useState("Free Online Tools & Calculators | ToolHub");
+  const [title, setTitle] = useState("Free Online Tools & Calculators | ToolArena");
   const [url, setUrl] = useState("https://example.com/calculators/percentage-calculator");
   const [description, setDescription] = useState(
     "Free online percentage calculator. Find what percent one number is of another, calculate percentage increase or decrease, and more."

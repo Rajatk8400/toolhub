@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
 
   const code = req.nextUrl.searchParams.get("code");
   const state = req.nextUrl.searchParams.get("state");
-  const expectedState = req.cookies.get("toolhub_oauth_state")?.value;
+  const expectedState = req.cookies.get("toolarena_oauth_state")?.value;
 
   if (!code || !state || !expectedState || state !== expectedState) {
     loginUrl.searchParams.set("error", "google_auth_failed");
@@ -63,7 +63,7 @@ export async function GET(req: NextRequest) {
       path: "/",
       maxAge: 60 * 60 * 24 * 7,
     });
-    res.cookies.set("toolhub_oauth_state", "", { path: "/", maxAge: 0 });
+    res.cookies.set("toolarena_oauth_state", "", { path: "/", maxAge: 0 });
     return res;
   } catch {
     loginUrl.searchParams.set("error", "google_auth_failed");

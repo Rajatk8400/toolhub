@@ -70,7 +70,7 @@ describe("/api/auth/login", () => {
     });
     const res = await POST(request({ email: "a@b.com", password: "correct-password" }, "2.2.2.5"));
     expect(res.status).toBe(200);
-    expect(res.headers.get("set-cookie")).toContain("toolhub_session=");
+    expect(res.headers.get("set-cookie")).toContain("toolarena_session=");
   });
 
   it("rate-limits repeated failed attempts for the same IP+email", async () => {
