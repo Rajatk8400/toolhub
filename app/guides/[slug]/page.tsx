@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { guides, getGuideBySlug } from "@/data/guides";
 import { tools } from "@/data/tools";
 import AdSlot from "@/components/ads/AdSlot";
+import { absoluteUrl } from "@/lib/config/site";
 
 export function generateStaticParams() {
   return guides.map((g) => ({ slug: g.slug }));
@@ -30,17 +31,40 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
     .map((s) => tools.find((t) => t.slug === s))
     .filter((t): t is NonNullable<typeof t> => Boolean(t));
 
+  const guideUrl = absoluteUrl(`/guides/${guide.slug}`);
+
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: guide.h1,
+    url: guideUrl,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": guideUrl,
+    },
     dateModified: guide.lastUpdated,
     author: guide.author ? { "@type": "Organization", name: guide.author } : undefined,
+    publisher: {
+      "@type": "Organization",
+      name: "ToolArena",
+      url: absoluteUrl("/"),
+    },
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+      { "@type": "ListItem", position: 2, name: "Guides", item: absoluteUrl("/guides") },
+      { "@type": "ListItem", position: 3, name: guide.title, item: guideUrl },
+    ],
   };
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-8">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
       <nav className="mb-4 text-sm text-gray-500">
         <Link href="/" className="hover:text-blue-600">Home</Link> {" / "}

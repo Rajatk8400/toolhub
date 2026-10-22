@@ -3,6 +3,7 @@ import Link from "next/link";
 import { toolCollections } from "@/data/collections";
 import ToolCollectionsGrid from "@/components/ToolCollectionsGrid";
 import AdSlot from "@/components/ads/AdSlot";
+import { absoluteUrl } from "@/lib/config/site";
 
 export const metadata: Metadata = {
   title: "Tool Collections - Curated Toolkits & Workspaces",
@@ -21,8 +22,8 @@ export default function CollectionsIndexPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "/" },
-      { "@type": "ListItem", position: 2, name: "Collections", item: "/collections" },
+      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+      { "@type": "ListItem", position: 2, name: "Collections", item: absoluteUrl("/collections") },
     ],
   };
 

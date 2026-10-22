@@ -3,9 +3,10 @@ import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import AdsenseScript from "@/components/ads/AdsenseScript";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { getSiteUrl, SITE_CONFIG } from "@/lib/config/site";
 import "./globals.css";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://toolarena.vercel.app";
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

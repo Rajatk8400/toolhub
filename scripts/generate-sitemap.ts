@@ -5,12 +5,19 @@ import { tools } from "../data/tools";
 import { categories } from "../data/categories";
 import { guides } from "../data/guides";
 import { toolCollections } from "../data/collections";
+import { CANONICAL_SITE_ORIGIN } from "../lib/config/site";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, "..");
 
-const base = process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || "https://toolarena.vercel.app";
+const rawBase = process.env.SITE_URL || process.env.NEXT_PUBLIC_SITE_URL || CANONICAL_SITE_ORIGIN;
+const base =
+  rawBase.includes("toolhub") ||
+  rawBase === "https://toolarena.vercel.app" ||
+  rawBase.includes("localhost")
+    ? CANONICAL_SITE_ORIGIN
+    : rawBase.replace(/\/+$/, "");
 
 interface SitemapEntry {
   url: string;

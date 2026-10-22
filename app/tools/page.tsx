@@ -5,6 +5,7 @@ import { categories } from "@/data/categories";
 import ToolCard from "@/components/ToolCard";
 import SearchBox from "@/components/SearchBox";
 import AdSlot from "@/components/ads/AdSlot";
+import { absoluteUrl } from "@/lib/config/site";
 
 export const metadata: Metadata = {
   title: "All Online Tools - Complete Directory | ToolArena",
@@ -21,8 +22,21 @@ export const metadata: Metadata = {
 export default function AllToolsPage() {
   const activeCategories = categories.filter((c) => c.slug !== "tools");
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+      { "@type": "ListItem", position: 2, name: "All Tools", item: absoluteUrl("/tools") },
+    ],
+  };
+
   return (
     <main className="mx-auto max-w-6xl px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <nav className="mb-4 text-sm text-gray-500">
         <Link href="/" className="hover:text-blue-600">Home</Link> {" / "}
         <span className="text-gray-700">All Tools</span>

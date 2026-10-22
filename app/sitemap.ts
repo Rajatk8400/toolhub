@@ -3,15 +3,10 @@ import { tools } from "@/data/tools";
 import { categories } from "@/data/categories";
 import { guides } from "@/data/guides";
 import { toolCollections } from "@/data/collections";
+import { getSiteUrl } from "@/lib/config/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base =
-    process.env.NEXT_PUBLIC_SITE_URL ||
-    (process.env.VERCEL_PROJECT_PRODUCTION_URL
-      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-      : process.env.NODE_ENV === "production"
-        ? "https://toolarena.vercel.app"
-        : "http://localhost:3000");
+  const base = getSiteUrl();
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: base, changeFrequency: "weekly", priority: 1.0 },

@@ -14,6 +14,32 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "toolhub-ecru.vercel.app",
+          },
+        ],
+        destination: "https://toolarena-ecru.vercel.app/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "toolarena.vercel.app",
+          },
+        ],
+        destination: "https://toolarena-ecru.vercel.app/:path*",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

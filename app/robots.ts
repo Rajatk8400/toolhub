@@ -1,13 +1,8 @@
 import type { MetadataRoute } from "next";
+import { getSiteUrl } from "@/lib/config/site";
 
 export default function robots(): MetadataRoute.Robots {
-  const base =
-    process.env.NEXT_PUBLIC_SITE_URL ||
-    (process.env.VERCEL_PROJECT_PRODUCTION_URL
-      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-      : process.env.NODE_ENV === "production"
-        ? "https://toolarena.vercel.app"
-        : "http://localhost:3000");
+  const base = getSiteUrl();
   return {
     rules: [
       {

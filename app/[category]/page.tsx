@@ -5,6 +5,7 @@ import { getCategory, categories } from "@/data/categories";
 import { getToolsByCategory, tools } from "@/data/tools";
 import ToolCard from "@/components/ToolCard";
 import AdSlot from "@/components/ads/AdSlot";
+import { absoluteUrl } from "@/lib/config/site";
 
 export function generateStaticParams() {
   return categories.map((c) => ({ category: c.slug }));
@@ -51,8 +52,8 @@ export default async function CategoryPage({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "/" },
-      { "@type": "ListItem", position: 2, name: cat.name, item: `/${cat.slug}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+      { "@type": "ListItem", position: 2, name: cat.name, item: absoluteUrl(`/${cat.slug}`) },
     ],
   };
 

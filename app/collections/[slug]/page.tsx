@@ -8,6 +8,7 @@ import {
 import { tools } from "@/data/tools";
 import ToolCard from "@/components/ToolCard";
 import AdSlot from "@/components/ads/AdSlot";
+import { absoluteUrl } from "@/lib/config/site";
 
 export function generateStaticParams() {
   return toolCollections.map((c) => ({ slug: c.slug }));
@@ -62,13 +63,13 @@ export default async function CollectionDetailPage({
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "/" },
-      { "@type": "ListItem", position: 2, name: "Collections", item: "/collections" },
+      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+      { "@type": "ListItem", position: 2, name: "Collections", item: absoluteUrl("/collections") },
       {
         "@type": "ListItem",
         position: 3,
         name: col.name,
-        item: `/collections/${col.slug}`,
+        item: absoluteUrl(`/collections/${col.slug}`),
       },
     ],
   };

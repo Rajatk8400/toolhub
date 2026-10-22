@@ -4,6 +4,7 @@ import { categories } from "@/data/categories";
 import { tools, getToolsByCategory } from "@/data/tools";
 import { guides } from "@/data/guides";
 import { toolCollections } from "@/data/collections";
+import { absoluteUrl } from "@/lib/config/site";
 
 export const metadata: Metadata = {
   title: "Sitemap - ToolArena",
@@ -12,8 +13,21 @@ export const metadata: Metadata = {
 };
 
 export default function HtmlSitemapPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: absoluteUrl("/") },
+      { "@type": "ListItem", position: 2, name: "Sitemap", item: absoluteUrl("/sitemap") },
+    ],
+  };
+
   return (
     <main className="mx-auto max-w-5xl px-4 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <nav className="mb-4 text-sm text-gray-500">
         <Link href="/" className="hover:text-blue-600">Home</Link> {" / "}
         <span className="text-gray-700">Sitemap</span>
